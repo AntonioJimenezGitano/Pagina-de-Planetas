@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(image0.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+}
+
+header {
+    background-color: #111;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sistema-solar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.planeta {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.planeta:hover {
+    transform: scale(1.2);
+}
+
+.mercurio { background: gray; }
+.venus { background: orange; }
+.tierra { background: blue; }
+.marte { background: red; }
+.jupiter { background: brown; }
+.saturno { background: goldenrod; }
+.urano { background: lightblue; }
+.neptuno { background: darkblue; }
+
+.info-planetas {
+    margin-top: 30px;
+}
+
+.info {
+    display: none;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.info:target {
+    display: block;
+}
+
+#juegos {
+    margin-top: 50px;
+}
+
+footer {
+    margin-top: 50px;
+    background-color: #111;
+    padding: 15px;
+}
+#juego-trivia {
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    font-family: Arial, sans-serif;
+}
+
+.pregunta {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    display: none;
+}
+
+
+label {
+    display: block;
+    background: #222;
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+label:hover {
+    background: #444;
+}
+
+
+.correcto, .incorrecto {
+    display: none;
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: center;
+}
+
+
+input:checked + label + .correcto {
+    display: block;
+    color: lightgreen;
+}
+
+
+input:checked + label + .incorrecto {
+    display: block;
+    color: red;
+}
+
+
